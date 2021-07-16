@@ -1,0 +1,109 @@
+body{
+    font-family: Arial, sans-serif;
+}
+.logo1{
+    width: 100%;
+    height: 61px;
+background: #344051;
+}
+.logo{
+    color: white;
+    font-size: 28px;
+    line-height: 60px;
+    padding-left: 20.2083%;
+    float: left;
+}
+.menu{
+    float: left;
+    padding-left: 22.4479%;
+}
+.menu li{
+    float: left;
+    line-height: 60px;
+    color: white;
+    margin-right: 40px;
+    text-transform: uppercase;
+    font-size: 16px;
+    
+}
+.main{
+    width: 100%;
+    height: calc(100% - 60px);
+    background: url(../img/boy.png) 90% 100%/auto 85% no-repeat , url(../img/bg.jpg) center/cover no-repeat;
+}
+.title__container{
+    float: left;
+    margin: 18% 0px 0px 21%;
+    color: #2c384a;
+    text-align: center;
+}
+.title__container h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.title__container h5{
+    margin-top: 4%;
+    font-size: 22px;
+    color: #79818d;
+}
+
+.title__container input{
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 6px;
+    color: #6d7682;
+    font-size: 13px;
+    padding: 0px 16px;
+    margin: 30px 28px 0px 10px;
+    
+}
+.main2{
+    width: 100%;
+    height: 716px;
+    background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0%D0%9F%D0%90%D0%A0%D0%9D%D0%AF.png) 50% 25% no-repeat, url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 8% no-repeat, url(../img/%D0%A4%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%81%D0%BB%D0%BE%D0%B9.jpg) center/cover no-repeat;
+}
+.title__container2 h3{
+    margin: 60px 45% 0% 45%;
+    font-size: 30px;
+    font-weight: bold;
+    color: #263244;
+   
+    
+}
+.text1{
+    margin: 325px 400px 20px 400px;
+    font-size: 15px;
+}
+.text2{
+    margin: 40px 400px 20px 400px;
+    font-size: 15px;
+}
+.title__container2 input{
+    height: 40px;
+    text-align: center;
+    border: 2px solid #6d7682;
+    background: none;
+    border-radius: 6px;
+    color: #6d7682;
+    font-size: 13px;
+    margin: 30px 47% 10px 47%;
+}
+.main3 h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: #263244;
+    margin: 0px 660px 0px 660px
+}
+main3{
+    width: 1920px;
+    height: 523px;
+    background: url(../img/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B0%20%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%D1%82%D1%803.jpg) center/cover no-repeat;
+}
+
+
+
+
+
