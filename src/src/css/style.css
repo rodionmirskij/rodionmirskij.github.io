@@ -3,15 +3,27 @@ body{
 }
 .logo1{
     width: 100%;
-    height: 61px;
+    height: 55px;
 background: #344051;
+    position: fixed
 }
 .logo{
     color: white;
-    font-size: 28px;
-    line-height: 60px;
+    font-size: 25px;
+    line-height: 55px;
     padding-left: 20.2083%;
     float: left;
+    -webkit-animation: comming 2s ease;
+    -o-animation: comming 2s ease;
+    animation: comming 2s ease;  
+}
+@keyframes comming{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 1;
+    }
 }
 .menu{
     float: left;
@@ -19,16 +31,68 @@ background: #344051;
 }
 .menu li{
     float: left;
-    line-height: 60px;
+    line-height: 55px;
     color: white;
     margin-right: 40px;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px; 
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s ease forwards;
+    opacity: 0;
+}
+.menu li a{
+    transition: all 0.1s;
+    color: white;
+    transform: scale(1);
+    display: block;
+}
+.menu li a:visited{
+    color: white;
+}
+.menu li a:hover{
+    color: #f09010;
+}
+.menu li a:active{
+    transform: scale(1.1);
+}
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+    }
     
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+
+
+
+
+main{
+    width: 100%;
+    height: 100%;
 }
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/boy.png) 90% 100%/auto 85% no-repeat , url(../img/bg.jpg) center/cover no-repeat;
 }
 .title__container{
@@ -36,6 +100,13 @@ background: #344051;
     margin: 18% 0px 0px 21%;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: tilemove 1s ease forwards;
+    -o-animation: tilemove 1s ease forwards;
+    animation: tilemove 1s ease forwards;
+    -webkit-animation-delay: 2.3s;
+    -o-animation-delay: 2.3s;
+    animation-delay: 2.3s;
 }
 .title__container h1{
     font-size: 60px;
@@ -46,6 +117,17 @@ background: #344051;
     margin-top: 4%;
     font-size: 22px;
     color: #79818d;
+}
+@keyframes tilemove{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+    }
+    
+    to{
+        opacity: 1;
+        margin-left: 21%;
+    }
 }
 
 .title__container input{
@@ -58,8 +140,21 @@ background: #344051;
     font-size: 13px;
     padding: 0px 16px;
     margin: 30px 28px 0px 10px;
-    
+    transition: all 0.2s;
+    transform: scale(1);
 }
+.title__container input:hover{
+    background: #344051;
+    color: white;
+}
+.title__container input:active{
+    transform: scale(1.1);
+}
+
+
+
+
+
 .main2{
     width: 100%;
     height: 730px;
@@ -70,16 +165,18 @@ background: #344051;
     font-size: 27px;
     font-weight: bold;
     color: #263244;
-   
-    
 }
 .text1{
     margin: 325px 400px 20px 400px;
     font-size: 15px;
+    transform: scale(1);
+    transition: all 0.2s ease;
 }
 .text2{
     margin: 40px 400px 20px 400px;
     font-size: 15px;
+     transform: scale(1);
+    transition: all 0.2s ease;
 }
 .title__container2 input{
     height: 40px;
@@ -91,7 +188,24 @@ background: #344051;
     font-size: 13px;
     display: block;
     margin: 30px auto 10px auto;
+    transition: all 0.2s;
+    transform: scale(1);
 }
+.title__container2 input:hover{
+    background: #344051;
+    color: white;
+}
+.title__container2 input:active{
+    transform: scale(1.1);
+}
+.text1:hover{
+    transform: scale(1.1);
+}
+.text2:hover{
+    transform: scale(1.1);
+}
+
+
 .main3 h3{
     font-size: 27px;
     font-weight: bold;
@@ -109,6 +223,10 @@ background: #344051;
 .Li1{
     margin: 147px 1020px 0px 19%;
 }
+.Li1 img{
+     transform: scale(1);
+    transition: all 0.2s;
+}
 .Li1 h4{
     font-weight: bold;
     color: #cf7600;
@@ -120,6 +238,10 @@ background: #344051;
 
 .Li2{
     margin: -153px 730px 0px 39%; 
+}
+.Li2 img{
+     transform: scale(1);
+    transition: all 0.2s;
 }
 .Li2 h4{
     font-weight: bold;
@@ -133,6 +255,10 @@ background: #344051;
 .Li3 {
     margin: -149px 0px 0px 59%;
 }
+.Li3 img{
+     transform: scale(1);
+    transition: all 0.2s;
+}
 .Li3 h4 {
     font-weight: bold;
     color: #cf7600;
@@ -144,6 +270,10 @@ background: #344051;
 .Li4{
     margin: -148px 0px 0px 79%;
 }
+.Li4 img{
+     transform: scale(1);
+    transition: all 0.2s;
+}
 .Li4 h4{
     font-weight: bold;
     color: #cf7600;
@@ -152,13 +282,24 @@ background: #344051;
 .Li4 p{
     margin: 17px 135px 0px -80px;
 }
+.Li1 img:hover{
+    transform: scale(1.2);
+}
+.Li2 img:hover{
+    transform: scale(1.2);
+}
+.Li3 img:hover{
+    transform: scale(1.2);
+}
+.Li4 img:hover{
+    transform: scale(1.2);
+}
 
 
 
 .p1{
     margin: 71px 35% 0% 35%;
 }
-
 .main4 h3{
     font-size: 27px;
     font-weight: bold;
@@ -166,7 +307,6 @@ background: #344051;
     margin: 105px 47% 0% 47%;
 
 }
-
 .main4 {
     width:100%;
     height: 1254px;
@@ -215,8 +355,16 @@ background: #344051;
     font-size: 13px;
     padding: 0px 41px;
     margin: 86px 50% 0px 12.25%;
+    transform: scale(1);
+    transition: all 0.2s;
 }
-
+.main4 input:active{
+    transform: scale(1.1); 
+}
+.main4 input:hover{
+    background: #db8755;
+    color: white;
+}
 .main5 h2{
     font-size: 33px;
     font-weight: bold;
@@ -245,8 +393,8 @@ background: #344051;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    
 }
+
 
 .menu42 h5{
     font-size: 20px;
@@ -395,12 +543,20 @@ background: #344051;
 .Li111{
     margin: 47px 0px 0px 34%;
 }
+.Li111 img{
+     transform: scale(1);
+    transition: all 0.2s;
+}
 .Li111 p{
     margin: 14px 0px 0px -45px;
     color: #ffffff; 
 }
 .Li112 {
     margin: -66px 0px 0px 51%;
+}
+.Li112 img{
+     transform: scale(1);
+    transition: all 0.2s;
 }
 .Li112 p{
     margin: 14px 0px 0px -47px;
@@ -409,9 +565,22 @@ background: #344051;
 .Li113{
     margin: -50px 0px 0px 67%;
 }
+.Li113 img{
+     transform: scale(1);
+    transition: all 0.2s;
+}
 .Li113 p{
     margin: 14px 0px 0px -26px;
     color: #ffffff; 
+}
+.Li111 img:hover{
+    transform: scale(1.2);
+}
+.Li112 img:hover{
+    transform: scale(1.2);
+}
+.Li113 img:hover{
+    transform: scale(1.2);
 }
 .main8 h5{
     margin: 40px 0px 0px 43.7%;
@@ -453,6 +622,15 @@ background: #344051;
     font-size: 13px;
     padding: 0px 25px;
     margin: 30px 0px 0px 48%;
+    transition: all 0.2s;
+    transform: scale(1);
+}
+.input4:hover{
+    background: black;
+    color: white;
+}
+.input4:active{
+    transform: scale(1.1);
 }
 
 .main9{

@@ -1,0 +1,38 @@
+body{
+    padding: 50px;
+}
+
+.box span{
+    display: block;
+    text-align: center;
+    margin-top: 90px;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    background-color:azure;
+    animation: move 1s linear reverse infinite, bg-color 2s infinite;
+}
+@keyframes move{
+    from{
+        margin-left: 0;
+    }
+    
+    to{
+        margin-left: 200px;
+    }
+}
+
+@keyframes bg-color{
+    0%{
+        background: red;
+    }
+    
+    100%{
+        background: #FFF;
+    }
+}
+.box:hover{
+    animation-play-state: paused;
+}
