@@ -1,3 +1,12 @@
+@font-face {
+	font-family: 'Franklin Gothic Medium';
+	src: url('../fonts/Franklin Gothic Medium.eot');
+	src: local('☺'), url('../fonts/Franklin Gothic Medium.woff') format('woff'), url('../Franklin Gothic Medium.ttf') format('truetype'), url('../Franklin Gothic Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 body{
     font-family: Arial, sans-serif;
 }
@@ -5,17 +14,19 @@ body{
     width: 100%;
     height: 55px;
 background: #344051;
-    position: fixed
+    position: fixed;
+    font-family: Franklin Gothic Medium,sans-serif; 
+    z-index: 10;
 }
 .logo{
     color: white;
     font-size: 25px;
     line-height: 55px;
-    padding-left: 20.2083%;
     float: left;
     -webkit-animation: comming 2s ease;
     -o-animation: comming 2s ease;
-    animation: comming 2s ease;  
+    animation: comming 2s ease;
+    
 }
 @keyframes comming{
     from{
@@ -27,7 +38,7 @@ background: #344051;
 }
 .menu{
     float: left;
-    padding-left: 22.4479%;
+    
 }
 .menu li{
     float: left;
@@ -46,6 +57,7 @@ background: #344051;
     color: white;
     transform: scale(1);
     display: block;
+    text-decoration: none;
 }
 .menu li a:visited{
     color: white;
@@ -82,10 +94,15 @@ background: #344051;
 .menu li:nth-child(6){
     animation-delay: 2s;
 }
+.white-btn:visited{
+    color: white;
+}
 
 
-
-
+.custom-css3{
+    color: red;
+    margin: 0px 5px 0px 0px;
+}
 main{
     width: 100%;
     height: 100%;
@@ -97,9 +114,9 @@ main{
 }
 .title__container{
     float: left;
-    margin: 18% 0px 0px 21%;
     color: #2c384a;
     text-align: center;
+    width: 100%;
     opacity: 0;
     -webkit-animation: tilemove 1s ease forwards;
     -o-animation: tilemove 1s ease forwards;
@@ -150,7 +167,29 @@ main{
 .title__container input:active{
     transform: scale(1.1);
 }
-
+@media (max-width: 991px){
+    .title__container, .title__container h5, .title__container input{
+        color: white;
+        position: relative;
+        z-index: 3;
+    }
+    .title__container input{
+    border: 2px solid #fff;
+    }
+    .main{
+        position: relative;
+    }
+    .main::after{
+        content: "";
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background: rgba(0,0,0,0.4);
+         z-index: 1;
+    }
+}
 
 
 
@@ -376,7 +415,7 @@ main{
     width:100%;
     height: 952px;
     background: 
-        url(../img/%D0%BB%D0%B8%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%B4%D0%B8%D1%82%D0%BE%D0%B3%D0%B0.png) 397px 523px no-repeat, 
+        url(../img/%D0%BB%D0%B8%D0%BD%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%B4%D0%B8%D1%82%D0%BE%D0%B3%D0%B0.png) 397px 523px no-repeat,
         url(../img/%D0%A4%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%81%D0%BB%D0%BE%D0%B9.jpg) center/cover no-repeat;
 }
 .menu41 h5{
@@ -386,15 +425,15 @@ main{
     margin: 54px 0px 0px 26%;
 }
 .menu41 select{
-    background: #eeeeee;
+    background: url(../img/%D0%B3%D0%B0%D0%BB%D0%BE%D1%87%D0%BA%D0%B0.png) 700px 21px  no-repeat;
+    background-color: #eeeeee;
     height: 57px;
     margin: 22px 0px 0px 26%;
-    padding: 0px 285px;
+    padding: 0px 570px 0px 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
-
 
 .menu42 h5{
     font-size: 20px;
@@ -404,10 +443,11 @@ main{
 }
 
 .menu42 select{
-    background: #eeeeee;
+    background: url(../img/%D0%B3%D0%B0%D0%BB%D0%BE%D1%87%D0%BA%D0%B0.png) 700px 21px  no-repeat;
+    background-color: #eeeeee;
     height: 57px;
     margin: 22px 0px 0px 26%;
-    padding: 0px 285px;
+   padding: 0px 570px 0px 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -421,13 +461,15 @@ main{
 }
 
 .menu43 select{
-    background: #eeeeee;
+    background: url(../img/%D0%B3%D0%B0%D0%BB%D0%BE%D1%87%D0%BA%D0%B0.png) 700px 21px  no-repeat;
+    background-color: #eeeeee;
     height: 57px;
     margin: 22px 0px 0px 26%;
-    padding: 0px 285px;
+    padding: 0px 570px 0px 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    
 }
 .menu43p1{
     font-size: 15px; 
@@ -441,6 +483,7 @@ main{
 }
 
 
+
 .main6 h3{
     font-size: 27px;
     font-weight: bold;
@@ -452,9 +495,11 @@ main{
 .main6 {
     width: 100%;
     height: 499px;
-    background: url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 160px no-repeat, 
-        url(../img/%D1%84%D0%BE%D0%BD.png) center/cover no-repeat;
+    background: 
+        url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 160px no-repeat, 
+        url(../img/%D1%84%D0%BE%D0%BD.png) center/cover no-repeat fixed;
 }
+
 .li11{
     margin: 11px 0px 0px 20%;   
 }
@@ -593,7 +638,7 @@ main{
     border: 1px #d3d6dc;
     background: #d3d6dc;
     font-size: 13px;
-    padding: 0px 97px;
+    padding: 0px 183px 0px 10px;
     margin: 45px 0px 0px 28%;
 }
 .input2{
@@ -601,7 +646,7 @@ main{
     border: 1px #d3d6dc;
     background: #d3d6dc;
     font-size: 13px;
-    padding: 0px 97px;
+    padding: 0px 183px 0px 10px;
     margin: 0px 0px 0px 25px;
 }
 .input3{
@@ -609,7 +654,7 @@ main{
     border: 1px #d3d6dc;
     background: #d3d6dc;
     font-size: 13px;
-    padding: 0px 260px;
+    padding: 0px 508px 0px 10px;
     margin: 14px 0px 0px 28%;
 }
 .input4{
