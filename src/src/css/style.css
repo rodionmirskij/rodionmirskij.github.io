@@ -197,22 +197,23 @@ main{
 .main2{
     width: 100%;
     height: 730px;
-    background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0%D0%9F%D0%90%D0%A0%D0%9D%D0%AF.png) 50% 25% no-repeat, url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 7.5%  no-repeat, url(../img/%D0%A4%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%81%D0%BB%D0%BE%D0%B9.jpg) center/cover no-repeat;
+    background: url(../img/%D1%84%D0%BE%D1%82%D0%BA%D0%B0%D0%9F%D0%90%D0%A0%D0%9D%D0%AF.png) 50% 226px no-repeat, url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 162px no-repeat, url(../img/%D0%A4%D0%BE%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%20%D1%81%D0%BB%D0%BE%D0%B9.jpg) center/cover no-repeat;
 }
+
 .title__container2 h3{
-    margin: 109px 45.5% 0% 45.5%;
+    margin-top: 39px;
     font-size: 27px;
     font-weight: bold;
     color: #263244;
 }
 .text1{
-    margin: 325px 400px 20px 400px;
+    margin-top: 260px;
     font-size: 15px;
     transform: scale(1);
     transition: all 0.2s ease;
 }
 .text2{
-    margin: 40px 400px 20px 400px;
+    margin-top: 43px;
     font-size: 15px;
      transform: scale(1);
     transition: all 0.2s ease;
@@ -226,7 +227,8 @@ main{
     color: #6d7682;
     font-size: 13px;
     display: block;
-    margin: 30px auto 10px auto;
+    margin-left: 20px;
+    margin-top: 37px;
     transition: all 0.2s;
     transform: scale(1);
 }
