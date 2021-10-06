@@ -230,8 +230,13 @@ main{
 .title__container2 p:hover{
     transform: scale(1.1);
 }
-
-
+.element-animation{
+    opacity: 0;
+}
+.element-animation.show-animation{
+    opacity: 1;
+    transition: opacity 1s;
+}
 
 
 .main3 h3{
@@ -362,11 +367,14 @@ main{
 .main7{
     background: url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 160px no-repeat;
 }
-.main7 h3{
-    font-size: 25px;
-    font-weight: bold;
+
+.main7 h5{
     color: #263244;
 }
+.main7 p{
+    color: #263244;
+}
+
 
 
 
