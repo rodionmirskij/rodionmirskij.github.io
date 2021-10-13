@@ -1,5 +1,6 @@
 "use strict"
-
+//калькулятор
+/*
 let sum = 0;
 let time = 0;
 
@@ -71,7 +72,7 @@ if (flexibility == "1") {
 
 alert("Стоимость: " + sum + "Р");
 alert("Сроки(в днях): " + time);
-
+*/
 
 
 
@@ -107,7 +108,7 @@ $(document).ready(function () {
 $(document).ready(function(){
 $(window).scroll(() => {
     let scrollDistance = $(window).scrollTop();
-    $("section").each((i, el) => {
+    $(".section").each((i, el) => {
         
         if($(el).offset().top - $("nav").outerHeight() <= scrollDistance){
             $("nav a").each((i, el) => {
@@ -123,7 +124,7 @@ $(window).scroll(() => {
 
 $('a[href^="#"]').click(function(){
     let valHref = $(this).attr("href");
-    $('html, body').animate({scrollTop: $(valHref).offset().top - 60 + "px"})
+    $('html, body').animate({scrollTop: $(valHref).offset().top - 50 + "px"})
 });
 
 
@@ -150,7 +151,72 @@ function onEntry (entry){
     });
 }
 
+//калькулятор
+const tentacles = document.querySelector('#tentacles');
+const customRange = document.querySelector('#customRange2');
+const inputs = document.querySelectorAll('#select1, #select2, #select3, #customRange2, #tentacles');
+
+const optionType = document.querySelectorAll('option[name="type"]');
+const optionDesign = document.querySelectorAll('option[name="design"]');
+const optionAdaptive = document.querySelectorAll('option[name="adaptive"]');
+
+const basePrice = 300; 
+const totalPriceElement = document.querySelector('#total-price')
+
+customRange.addEventListener('input', function(){
+    
+    tentacles.value = customRange.value;
+});
+
+tentacles.addEventListener('input', function(){
+    customRange.value = tentacles.value;
+});
 
 
+function calculate(){
+    let totalPrice = basePrice * parseInt(tentacles.value);
+    console.log(totalPrice);
+    
+    for (const option of optionType){
+    if (option.checked){
+    totalPrice = totalPrice * parseFloat(option.value);
+       };
+    };
+    
+     for (const option of optionDesign){
+    if (option.checked){
+    totalPrice = totalPrice * parseFloat(option.value);
+       };
+    };
+    
+    for (const option of optionAdaptive){
+    if (option.checked){
+    totalPrice = totalPrice * parseFloat(option.value);
+       };
+    };
+    
+    const formatter = new Intl.NumberFormat('ru');
+    totalPriceElement.innerText = formatter.format(totalPrice); 
+};
+
+calculate();
+
+for (const input of inputs){
+    console.log(input);
+    input.addEventListener('input', function(){
+     calculate();
+    });
+};
+
+//всплывающее окно
+$(document).ready(function(){
+showStartModal();
+});
+
+function showStartModal(){
+    setTimeout(function(){
+    $('#exampleModal').modal('show'); 
+    }, 30000);
+};
 
 
