@@ -1,82 +1,4 @@
 "use strict"
-//калькулятор
-/*
-let sum = 0;
-let time = 0;
-
-let kindOf = ('.choise1');
-console.log(kindOf);
-
-if (kindOf == "1") {
-    sum = sum + 5000;
-    time = time + 5;
-    console.log(time);
-    console.log(sum);
-    }
-
-    else if (kindOf == "2"){
-        sum = sum + "7000";
-        time = time + 4;
-    console.log(sum);
-    }
-        
-    else if (kindOf == "3"){
-      sum = sum + 4000;
-      time = time + 5;
-      console.log(time);
-      console.log(sum);
-    }
-    
-    else {
-        sum = sum + 2000;
-        time = time + 3;
-        console.log(time);
-        console.log(sum);
-    };
-
-
-
-let disign = prompt("Выберите цифру. Дизайн: 1-авторский, 2-индивидуальный");
-console.log(disign);
-
-if (disign == "1") {
-    sum = sum + 2000;
-    time = time + 2;
-    console.log(time);
-    console.log(sum);
-    }
-    else {
-    sum = sum + 5000;
-    time = time + 4;
-    console.log(time);
-    console.log(sum);
-    };
-
-
-
-let flexibility = prompt("Выберите цифру. Адаптивность: 1-адаптивный 2-не адаптивный");
-console.log(flexibility);
-
-if (flexibility == "1") {
-    sum = sum + 5000;
-    time = time + 2;
-    console.log(time);
-    console.log(sum);
-    }
-    else {
-    sum = sum + 2000;
-    time = time + 1;
-    console.log(time);
-    console.log(sum);
-    };
-
-alert("Стоимость: " + sum + "Р");
-alert("Сроки(в днях): " + time);
-*/
-
-
-
-
 //анимация чисел 
 
 $(document).ready(function () {
@@ -152,16 +74,9 @@ function onEntry (entry){
 }
 
 //калькулятор
+//палзунок
 const tentacles = document.querySelector('#tentacles');
 const customRange = document.querySelector('#customRange2');
-const inputs = document.querySelectorAll('#select1, #select2, #select3, #customRange2, #tentacles');
-
-const optionType = document.querySelectorAll('option[name="type"]');
-const optionDesign = document.querySelectorAll('option[name="design"]');
-const optionAdaptive = document.querySelectorAll('option[name="adaptive"]');
-
-const basePrice = 300; 
-const totalPriceElement = document.querySelector('#total-price')
 
 customRange.addEventListener('input', function(){
     
@@ -173,50 +88,35 @@ tentacles.addEventListener('input', function(){
 });
 
 
-function calculate(){
-    let totalPrice = basePrice * parseInt(tentacles.value);
-    console.log(totalPrice);
-    
-    for (const option of optionType){
-    if (option.checked){
-    totalPrice = totalPrice * parseFloat(option.value);
-       };
-    };
-    
-     for (const option of optionDesign){
-    if (option.checked){
-    totalPrice = totalPrice * parseFloat(option.value);
-       };
-    };
-    
-    for (const option of optionAdaptive){
-    if (option.checked){
-    totalPrice = totalPrice * parseFloat(option.value);
-       };
-    };
-    
-    const formatter = new Intl.NumberFormat('ru');
-    totalPriceElement.innerText = formatter.format(totalPrice); 
-};
-
-calculate();
-
-for (const input of inputs){
-    console.log(input);
-    input.addEventListener('input', function(){
-     calculate();
-    });
-};
-
-//всплывающее окно
-$(document).ready(function(){
-showStartModal();
+$('#type, #design, #adaptive, #customRange2, #tentacles').on('change', function(){
+    sum();
 });
+function sum(){
+    var type = $('#type').val();
+    var design = $('#design').val();
+    var adaptive = $('#adaptive').val();
+    
+    
+    var sum = type + design + adaptive;
+    //$('.total-price').text(sum);
+    
+    $({countNum: $('.total-price').text()}).animate({
+        countNum: sum
+    }
+    ,
+    {
+        duration: 500,
+        easing: 'swing',
+        step: function(){
+         $('.sum').text(Math.floor(this.countNum));   
+        },
+        complete: function(){
+            $('.sum').text(this.countNum);
+        }
+    }
+    )
+}
 
-function showStartModal(){
-    setTimeout(function(){
-    $('#exampleModal').modal('show'); 
-    }, 30000);
-};
+
 
 

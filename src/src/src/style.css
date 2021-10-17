@@ -18,6 +18,7 @@ background: #344051;
     font-family: Franklin Gothic Medium,sans-serif; 
     z-index: 10;
 }
+
 .logo{
     color: white;
     font-size: 25px;
@@ -40,6 +41,7 @@ background: #344051;
     float: left;
     
 }
+
 .menu li{
     float: left;
     line-height: 55px;
@@ -68,6 +70,10 @@ background: #344051;
 .menu li a:active{
     transform: scale(1.1);
 }
+a.active{
+    color: #f09010;
+}
+
 @keyframes topshift{
     from{
         opacity: 0;
@@ -390,7 +396,15 @@ input[type="number"]:focus {
 .main7 p{
     color: #263244;
 }
-
+.carousel-indicators{
+     bottom: -30px;
+}
+.carousel1, .carousel2 {
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 100%, 100%;
+    border-radius: 50%;
+}
 
 
 
@@ -456,5 +470,8 @@ input[type="number"]:focus {
     transform: scale(1.1);
 }
 
+.inst{
+    color: white;
+}
 
 
