@@ -74,30 +74,21 @@ function onEntry (entry){
 }
 
 //калькулятор
-//палзунок
-const tentacles = document.querySelector('#tentacles');
-const customRange = document.querySelector('#customRange2');
-
-customRange.addEventListener('input', function(){
-    
-    tentacles.value = customRange.value;
-});
-
-tentacles.addEventListener('input', function(){
-    customRange.value = tentacles.value;
-});
 
 
-$('#type, #design, #adaptive, #customRange2, #tentacles').on('change', function(){
+
+$('#type, #design, #adaptive').on('change', function(){
     sum();
 });
 function sum(){
     var type = $('#type').val();
     var design = $('#design').val();
     var adaptive = $('#adaptive').val();
-    
-    
-    var sum = type + design + adaptive;
+
+ 
+    var sum = parseInt(type) + parseInt(design) + parseInt(adaptive);
+    console.log(sum);
+  
     //$('.total-price').text(sum);
     
     $({countNum: $('.total-price').text()}).animate({
@@ -108,15 +99,27 @@ function sum(){
         duration: 500,
         easing: 'swing',
         step: function(){
-         $('.sum').text(Math.floor(this.countNum));   
+         $('.total-price').text(Math.floor(this.countNum));   
         },
         complete: function(){
-            $('.sum').text(this.countNum);
+            $('.total-price').text(this.countNum);
         }
     }
     )
-}
+};
+
+
+//всплывающее окно
+$ ( document ).ready(function(){
+    showStartModal();
+});
+function showStartModal(){
+    setTimeout (function(){
+        $('#exampleModal').modal('show');
+         }, 2000);
+};
 
 
 
-
+//затяжная анимация wow
+new WOW().init();

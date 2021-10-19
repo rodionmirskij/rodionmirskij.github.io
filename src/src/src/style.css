@@ -71,7 +71,7 @@ background: #344051;
     transform: scale(1.1);
 }
 a.active{
-    color: #f09010;
+    color: #f00;
 }
 
 @keyframes topshift{
@@ -390,8 +390,11 @@ input[type="number"]:focus {
     background: url(../img/%D0%A7%D0%B5%D1%80%D1%82%D0%B0%20%D0%B7%D0%B0%D0%B3%D0%BE%D0%BB%D0%BE%D0%B2%D0%BA%D0%B0.png) 50% 160px no-repeat;
 }
 
-.main7 h5{
+.main7 h3{
+     font-size: 25px;
+    font-weight: bold;
     color: #263244;
+    
 }
 .main7 p{
     color: #263244;
@@ -473,5 +476,24 @@ input[type="number"]:focus {
 .inst{
     color: white;
 }
+
+.end{
+    width: 100%;
+    height: 55px;
+    background: #344051;
+    font-family: Franklin Gothic Medium,sans-serif; 
+    z-index: 10;
+}
+.logoEnd{
+     color: white;
+    font-size: 25px;
+    line-height: 55px;
+}
+
+
+
+
+
+
 
 
