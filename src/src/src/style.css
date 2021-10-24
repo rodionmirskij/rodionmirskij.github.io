@@ -64,14 +64,12 @@ background: #344051;
 .menu li a:visited{
     color: white;
 }
-.menu li a:hover{
-    color: #f09010;
-}
+
 .menu li a:active{
     transform: scale(1.1);
 }
 a.active{
-    color: #f00;
+    color: #f09010 !important;
 }
 
 @keyframes topshift{
@@ -352,10 +350,6 @@ input[type="number"]:focus {
 	outline: 2px solid #37a9ff;
 }
 
-.form-label{
-     font-size: 15px; 
-    font-weight: bold;
-}
 .main5 span{
     color: #37a9ff;
 }
@@ -484,11 +478,7 @@ input[type="number"]:focus {
     font-family: Franklin Gothic Medium,sans-serif; 
     z-index: 10;
 }
-.logoEnd{
-     color: white;
-    font-size: 25px;
-    line-height: 55px;
-}
+
 
 
 

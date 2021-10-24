@@ -73,10 +73,7 @@ function onEntry (entry){
     });
 }
 
-//калькулятор
-
-
-
+//калькулятор1
 $('#type, #design, #adaptive').on('change', function(){
     sum();
 });
@@ -107,7 +104,37 @@ function sum(){
     }
     )
 };
+//калькулятор2
+$('#type, #design, #adaptive').on('change', function(){
+    sum();
+});
+function sum(){
+    var type = $('#type').data();
+    var design = $('#design').data();
+    var adaptive = $('#adaptive').data();
 
+ 
+    var sumTime = parseInt(type) + parseInt(design) + parseInt(adaptive);
+    console.log(sumTime);
+  
+    //$('.total-price').text(sum);
+    
+    $({countNum: $('.total-time').text()}).animate({
+        countNum: sum
+    }
+    ,
+    {
+        duration: 500,
+        easing: 'swing',
+        step: function(){
+         $('.total-time').text(Math.floor(this.countNum));   
+        },
+        complete: function(){
+            $('.total-time').text(this.countNum);
+        }
+    }
+    )
+};
 
 //всплывающее окно
 $ ( document ).ready(function(){
@@ -123,3 +150,44 @@ function showStartModal(){
 
 //затяжная анимация wow
 new WOW().init();
+
+//Валидация форм
+$("#inputTel").mask("+7(999) 999-9999");
+
+$('form').submit(function(event){
+if ($("#inputTel").val() == "" || $("#exampleFormControlInput1").val == "" ){
+    event.preventDefault();
+    alert("Введите телефон")
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
