@@ -109,9 +109,9 @@ $('#type, #design, #adaptive').on('change', function(){
     sum();
 });
 function sum(){
-    var type = $('#type').data();
-    var design = $('#design').data();
-    var adaptive = $('#adaptive').data();
+    var type = $('#type').$(this).attr("data");
+    var design = $('#design').$(this).attr("data");
+    var adaptive = $('#adaptive').$(this).attr("data");
 
  
     var sumTime = parseInt(type) + parseInt(design) + parseInt(adaptive);
