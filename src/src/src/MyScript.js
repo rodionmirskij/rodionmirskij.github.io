@@ -105,13 +105,14 @@ function sum(){
     )
 };
 //калькулятор2
+
 $('#type, #design, #adaptive').on('change', function(){
     sum();
 });
 function sum(){
-    var type = $('#type').$(this).attr("data");
-    var design = $('#design').$(this).attr("data");
-    var adaptive = $('#adaptive').$(this).attr("data");
+    var type = $('#type').attr("data");
+    var design = $('#design').attr("data");
+    var adaptive = $('#adaptive').attr("data");
 
  
     var sumTime = parseInt(type) + parseInt(design) + parseInt(adaptive);
@@ -143,7 +144,7 @@ $ ( document ).ready(function(){
 function showStartModal(){
     setTimeout (function(){
         $('#exampleModal').modal('show');
-         }, 2000);
+         }, 30000);
 };
 
 
@@ -152,16 +153,49 @@ function showStartModal(){
 new WOW().init();
 
 //Валидация форм
+
 $("#inputTel").mask("+7(999) 999-9999");
 
-$('form').submit(function(event){
+$('.mail').submit(function(event){
 if ($("#inputTel").val() == "" || $("#exampleFormControlInput1").val == "" ){
     event.preventDefault();
     alert("Введите телефон")
 }
 });
 
+//анимация после нажатия на кнопку отправить для "обратной связи"
+$('.mail').submit(function(event){
+    event.preventDefault();
+    
+    $.ajax({
+        type: "POST",
+        url: "php/mail.php",
+        data: $(this).serialize()
+    }).done(function (){
+        $(this).find("input").val("");
+        alert("Сообщение успешно отправлено!");
+        $("form").trigger("reset");
+    });
+    return false;
+    
+});
 
+//анимация после нажатия на кнопку отправить для "Отправьте мне сообщение"
+$('.massEmail').submit(function(event){
+    event.preventDefault();
+    
+    $.ajax({
+        type: "POST",
+        url: "php/mail2.php",
+        data: $(this).serialize()
+    }).done(function (){
+        $(this).find("input").val("");
+        alert("Сообщение успешно отправлено!");
+        $("form").trigger("reset");
+    });
+    return false;
+    
+});
 
 
 
