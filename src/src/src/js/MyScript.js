@@ -107,12 +107,12 @@ function sum(){
 //калькулятор2
 
 $('#type, #design, #adaptive').on('change', function(){
-    sum();
+    sum2();
 });
-function sum(){
-    var type = $('#type').attr("data");
-    var design = $('#design').attr("data");
-    var adaptive = $('#adaptive').attr("data");
+function sum2(){
+    var type = $('#type option:selected').attr("data");
+    var design = $('#design option:selected').attr("data");
+    var adaptive = $('#adaptive option:selected').attr("data");
 
  
     var sumTime = parseInt(type) + parseInt(design) + parseInt(adaptive);
@@ -121,7 +121,7 @@ function sum(){
     //$('.total-price').text(sum);
     
     $({countNum: $('.total-time').text()}).animate({
-        countNum: sum
+        countNum: sumTime
     }
     ,
     {
